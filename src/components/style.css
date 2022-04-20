@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'Source Serif';
+  src: url(./SourceSerif4-Semibold.otf);
+}
+
+#print-area {
+  border-color: #aaa;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.qrcode {
+  margin-bottom: 1em;
+  max-width: 175px;
+}
+
+.hidden {
+  display: none;
+}
+textarea {
+  background-color: #fff;
+  border: solid 1px #ddd;
+  font-family: 'Source Serif', serif !important;
+  font-size: 1.2em !important;
+  margin-bottom: 0;
+  height: 40px !important;
+  min-height: 0px !important;
+  overflow: hidden;
+  resize: none;
+}
+textarea#password {
+  height: 60px !important;
+}
+
+hr {
+  margin-top: 0;
+}
+
+button {
+  height: 50px;
+  width: 180px;
+}
+
+#settings {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-area,
+  #print-area * {
+    visibility: visible;
+  }
+  #print-area {
+    border-style: dashed;
+    box-shadow: none;
+  }
+  #print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
